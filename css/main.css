@@ -1,0 +1,989 @@
+:root{
+    --main-color : #E10600;
+}
+
+@font-face{
+    font-family: 'F1-bold';
+    src : url('../fonts/Formula1-Bold.otf');
+}
+@font-face{
+    font-family: F1-wide;
+    src : url(../fonts/Formula1-Wide.otf); 
+}
+@font-face{
+    font-family: F1-reg;
+    src : url(../fonts/Formula1-Regular.otf);
+}
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family : 'Titillium Web', sans-serif;
+}
+
+a{
+    text-decoration : none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+
+.header-part-1 .header-part1-items{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    height : 5vh;
+    margin : 0.3rem 2rem;
+}
+
+.header-part-1 .header-part1-items .item-1{
+    display : flex;
+    align-items: center;
+}
+
+.header-part-1 .header-part1-items .item-1 ul{
+    display : flex;
+    padding-left : 1.2rem;
+    align-items: center;
+    font-family: 'F1-bold', 'Titillium Web';
+}
+
+.header-part-1 .header-part1-items .item-1 ul li{
+    padding : 0rem 0.5rem;
+    font-size : 0.9rem;
+    margin : 0 0.5rem;
+}
+
+.header-part-1 .header-part1-items .item-1 ul a{
+    color : grey;
+}
+
+.header-part-1 .header-part1-items .item-1 ul a:hover{
+    color : black;
+}
+
+
+.header-part-1 .header-part1-items .item-1 img{
+    width : 40px;
+    height : 25px;
+    margin-right: 10px;
+}
+
+.header-part-1 .header-part1-items .item-2{
+    display : flex;
+    align-items: center;
+}
+
+.header-part-1 .header-part1-items .item-2 ul{
+    display : flex;
+    font-size : 0.9rem;
+    align-items: center;
+}
+
+.header-part-1 .header-part1-items .item-2 ul li{
+    margin : 0 1rem;
+    text-transform: uppercase;
+}
+
+.header-part-1 .header-part1-items .item-2 ul a{
+    color : grey;
+}
+
+.header-part-1 .header-part1-items .item-2 ul li:hover{
+    color : var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+.header-part-1 .header-part1-items .item-2 img{
+    height : 10px;
+    width : 80px;
+    padding-left : 0.6rem;
+    margin-right : 10px;
+}
+
+.buttons{
+    margin-left : 1rem;
+}
+
+
+/*=========================================================== Header Part 2  =======================================================================*/
+.header-part-2{
+    background : #E10600;
+}
+
+.header-part-2 ul{
+    display : flex;
+    height: 10vh;
+    padding : 0rem 10rem;
+    font-family : 'F1-reg', 'Titilium Web';
+}
+
+.header-part-2 ul li{
+    padding: 1.75rem 1rem;
+    transition : background 0.5s;
+}
+
+.header-part-2 ul li i{
+    margin-left : 0.3rem;
+    color : #fff;
+    font-size: 10px;
+
+    /* font-weight: lighter; */
+    /* padding-top : 1rem; */
+}
+
+.header-part-2 ul li a{
+    color : #fff;   
+}
+
+.header-part-2 ul li:hover{
+    background : #000;
+    cursor : pointer;
+}
+
+.header-part-2 ul li:hover .child-fade{
+    display: block;
+    background : #000;
+    width : 100%;
+    left : 0;
+    opacity : 0;
+    position : absolute;
+    margin-top: 1.45rem;
+    border-bottom : 2px #E10600 solid;
+
+    animation : animate1;
+    animation-duration : 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay : .6s;
+    animation-timing-function: ease-in-out;
+}
+
+.header-part-2 ul li .child-fade{
+    display : none;
+}
+
+@keyframes animate1{
+    0%{
+        opacity : 0;
+    }
+    
+    100%{
+        opacity : 1;
+    }
+}
+
+
+/* ================================= To Display The Part 1 of All Items================================================== */
+
+.header-part-2 ul li:hover .items{
+    /* padding-top : 2rem; */
+    border-bottom : 3px #333 solid;
+    border-right : 3px #333 solid;
+    border-bottom-right-radius : 10px;
+    font-family : 'F1-bold',sans-serif;
+}
+
+.header-part-2 ul li:hover .items .item{
+    display : inline-block;
+    margin : 0 20px 15px 30px;
+    border-bottom : 3px transparent solid;
+}
+
+.header-part-2 ul li:hover .items .item i{
+    color : #E10600;
+    font-size : 16px;
+}
+
+.header-part-2 ul li:hover .items .item:first-child{
+    margin-left : 0;
+}
+
+.header-part-2 ul li:hover .items .item a{
+    color : #fff;
+    cursor : pointer;
+}
+
+.header-part-2 ul li:hover .items .item:hover{
+    border-color: #E10600;
+}
+
+
+
+
+/* =================Drivers Section : Part - 1 ========================================================================================*/
+
+.all-drivers-container{
+    padding-top: 2rem;
+}
+
+.all-drivers-container .driver-row{
+    display : flex;
+    justify-content: space-evenly; 
+    padding : 7px 0;
+    margin-bottom : 12px;
+}
+
+.all-drivers-container .driver{
+    width : 25%; 
+    /* display : inline-block; */
+    border-bottom : 1.5px #333 solid;
+    border-right : 1.5px #333 solid;
+    border-bottom-right-radius: 10px;
+    margin-right : 30px;
+}
+
+.all-drivers-container .driver:hover{
+    border : none;
+}
+
+.all-drivers-container .driver-row .driver:last-child{
+    margin-right : 0;
+}
+
+.all-drivers-container .driver i{
+    color : #fff;
+    font-size : 19px;
+}
+
+
+.all-drivers-container .driver a{
+    display : flex;
+    align-items: center;
+    padding-bottom : 10px;
+    position : relative;
+}
+
+.all-drivers-container .driver a p{
+    margin-left: 10px;
+    color : #fff;
+    font-size : 12px;
+}
+
+.surname{
+    font-family: 'F1-bold',sans-serif;
+    text-transform : uppercase;
+    font-size : 12px;
+}
+
+.all-drivers-container .driver a .chevron{
+    position : absolute;
+    right : 10px;
+    padding-top : 6px;
+}
+
+
+/* ========================================== Teams ============================================================================= */
+
+
+.all-teams-container{
+    padding-top: 2rem;
+}
+
+.all-teams-container .driver-row{
+    display : flex;
+    justify-content: space-evenly; 
+    padding : 7px 0;
+    margin-bottom : 12px;
+}
+
+.all-teams-container .driver{
+    width : 25%; 
+    /* display : inline-block; */
+    border-bottom : 1.5px #333 solid;
+    border-right : 1.5px #333 solid;
+    border-bottom-right-radius: 10px;
+    margin-right : 30px;
+}
+
+.all-teams-container .driver:hover{
+    border : none;
+}
+
+.all-teams-container .driver-row .driver:last-child{
+    margin-right : 0;
+}
+
+.all-teams-container .driver i{
+    color : #fff;
+    font-size : 19px;
+}
+
+
+.all-teams-container .driver a{
+    display : flex;
+    flex-direction: column;
+    position : relative;
+}
+
+.all-teams-container .driver a .team-name p{
+    color : #fff;
+    font-size : 17px;
+}
+
+.all-teams-container .driver a .team-name .chevron{
+    display : inline;
+    position : absolute;
+    right : 10px;
+    top : 4px;
+}
+
+.all-teams-container .driver a .team-logo{
+    position : relative;
+    height : 50px;
+    margin-bottom : 10px;
+}
+
+.all-teams-container .driver a .team-logo img{
+    position : absolute;
+    height: 55px;
+    z-index : 1;
+    left : 15px;
+}
+
+.all-teams-container .driver a .team-logo .border-team{
+    border-left: 50px solid transparent;
+    height : 25px;
+    display : inline-block;
+    position : absolute;
+    top : 17px;
+    z-index : 0;
+}
+
+.all-teams-container .driver a .team-logo .border-alfa-romeo-left{
+    border-color : var(--alfa-romeo);
+}
+.all-teams-container .driver a .team-logo .border-mercedes-left{
+    border-color : var(--mercedes);
+}
+.all-teams-container .driver a .team-logo .border-red-bull-left{
+    border-color : var(--red-bull);
+}
+.all-teams-container .driver a .team-logo .border-ferrari-left{
+    border-color : var(--ferrari);
+}
+.all-teams-container .driver a .team-logo .border-renault-left{
+    border-color : var(--renault);
+}
+.all-teams-container .driver a .team-logo .border-racing-point-left{
+    border-color : var(--racing-point);
+}
+.all-teams-container .driver a .team-logo .border-mclaren-left{
+    border-color : var(--mclaren);
+}
+.all-teams-container .driver a .team-logo .border-williams-left{
+    border-color : var(--williams);
+}
+.all-teams-container .driver a .team-logo .border-haas-left{
+    border-color : var(--haas);
+}
+.all-teams-container .driver a .team-logo .border-alpha-tauri-left{
+    border-color : var(--alpha-tauri);
+}
+
+
+/* ===================================================================================Teams Section Done================================================================= */
+
+/* ====================================================================================Latest News Section=============================================================== */
+
+.latest-news-flex{
+    display : flex;
+}
+
+.latest-news-flex .latest-news-column-1{
+    flex : 0 0 50%;
+    margin-right : 18px;
+    border-top : 12px solid #E10600;
+    border-right : 12px solid #E10600;
+    padding-top : 20px;
+    padding-right : 15px;
+    border-top-right-radius : 25px;
+}
+
+.latest-news-column-1-content{
+    display : flex;
+    flex-direction : column;
+}   
+
+.latest-news-column-1-content-text{
+    min-width : 100%;
+    font-size : 32px;
+    margin-bottom : 9px;
+}
+
+.latest-news-column-content-image{
+    height : 100%;
+    overflow : hidden;
+}
+
+.latest-news-column-content-image img{
+    display: block;  
+    width : 100%;
+    height : auto;
+    transition : transform .5s ease;
+}
+
+.latest-news-column-1:hover .latest-news-column-content-image img{
+    transform : scale(1.2);
+}
+
+.latest-news-column-1:hover .latest-news-column-1-content-text{
+    text-decoration: underline;
+}
+
+
+.latest-news-column-2-row-1{
+    display : flex;
+}
+
+.latest-news-column-2-row-1-column{
+    display : flex;
+    flex-direction : column;
+    margin-right : 17px;
+    min-height : 100%;
+    width : 100%;
+}
+
+.latest-news-column-2-content-text{
+    font-size : 20px;
+}
+
+.latest-news-column-2-row-image{
+    overflow : hidden;
+    height : 100%;
+}
+
+.latest-news-column-2-row-image img{
+    width : 100%;
+    height : auto;
+    display : block;
+    transition : transform .5s ease;
+}
+
+.latest-news-column-2-content{
+    margin-top : 12px;
+    border-bottom : 1px solid #d3d3d3;
+    border-right : 1px solid lightgray;  
+    border-bottom-right-radius: 10px;
+    /* padding-bottom : 3rem; */
+    padding: 0rem 1rem 2rem 1rem;
+    height : 100%;
+    transition : all 0.4s;
+}
+
+.latest-news-column-2-content p{
+    font-size: 20px;
+}
+
+.latest-news-column-2-row-1:nth-child(2){
+    margin-top: 16px;
+}
+
+.latest-news-column-2-row-1-column:hover{
+    cursor : pointer;
+}
+
+
+.latest-news-column-2-row-1-column:hover .latest-news-column-2-content{
+    border-color : #E10600;
+}
+
+.latest-news-column-2-row-1-column:hover .latest-news-column-2-row-image img{
+    transform : scale(1.2);
+}
+
+
+/* =================================================================================== Editor's Picks Section =========================================================== */
+
+.f1-border-red{
+    border-top: 10px solid #E10600;
+    border-right: 10px solid #E10600;
+    border-bottom: 10px solid #E10600;
+    border-left: 0;
+    border-radius : 20px;
+    border-bottom-left-radius: 0;
+}
+
+.editor-header{
+    margin-right : 30px;
+    font-family : 'F1-bold', sans-serif;
+    font-size : 30px;
+}
+
+.editor-row{
+    padding-top : 1rem;
+    padding-bottom : 2rem;
+    padding-right : 0.7rem;
+    display : flex;
+}
+
+.editor-column-1{
+    flex : 1;
+}
+
+
+.editor-column-1 .item-img img{
+    width : 100%;
+    height : auto;
+}
+
+
+.editor-row a{
+    color : #000;
+    transition : all 0.5s;
+}
+
+.category{
+    text-transform : uppercase;
+    font-size : 10px;
+    color : #E10600;
+    font-family : 'Titilium Web', sans-serif;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.editor-column-content{
+    border-bottom : 1px solid #d3d3d3;
+    border-right : 1px solid lightgray;  
+    margin-top: 1rem;
+    border-bottom-right-radius: 10px;
+    /* padding-bottom : 3rem; */
+    padding: 0rem 1rem 2rem 1rem;
+    transition : all 0.4s;
+    height : 100%;
+}
+
+.editor-column-1{
+    font-size: 20px;
+    transition : all 0.4s;
+}
+
+.editor-column-1:hover,
+.test:hover,
+.test-2:hover{
+    cursor : pointer;
+}
+
+.editor-column-2{
+    padding-left: 0px;
+    display : flex;
+    font-size: 14px;
+    flex-direction : column;
+}
+
+.editor-column-2-row{
+    display : flex;
+    padding : 0px 10px;
+}
+
+.editor-column-2-row img{
+    width : 100%;
+    height : auto;
+}
+
+
+.editor-column-1:hover .editor-column-content,
+.test:hover .editor-column-content,
+.test-2:hover .editor-column-content{
+    border-color : #E10600;
+}
+
+.test{
+    display : flex;
+    min-height: 100%;
+    flex-direction : column;
+    transition : all 0.4s;
+}
+
+.test:last-child
+{
+    margin: 0 15px;
+}
+
+.editor-column-2-row .test-2{
+    flex : 1;
+}
+
+.test-2:last-child{
+    margin : 0 15px;
+}
+
+
+
+
+
+
+/* ================================================================ Standings ================================================================================================== */
+
+.standings-header{
+    background : #f7f4f1;
+}
+
+.standings-header ul{
+    display : flex;
+    align-items : center;
+    justify-content: center;
+}
+
+.standings-header ul li{
+    padding : 25px 0;
+    margin-left: 3rem;
+    margin-right : 3rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+}
+
+.standings-header ul li:hover{
+    border-color : #E10600;
+}
+
+.constructor-border{
+    border-left : 2px solid #333;
+    height : 20px;
+}
+
+.standings-background{
+    background : #303030;
+    /* height : 30vh; */
+}
+
+.standings-background p{
+    color : #fff;
+    text-align : center;
+    padding : 50px 0;
+
+    text-transform: uppercase;
+    font-size : 40px;
+}
+
+/* ========================================================================Standings Header======================================= */
+
+/* ==============Top - 3=================================== */
+
+.top-3{
+    padding-top : 170px;
+    background : #f7f4f1;
+}
+
+
+
+
+.top-3 .podium-flex{
+    display : flex;
+}
+
+.top-3 .podium-content img{
+    width : 20px;
+    height : 15px;
+    border-radius : 2px;
+}
+
+.top-3 .podium-flex .podium{
+    margin-right: 6px;
+    margin-left : 6px;
+}
+
+
+.top-3 .podium:last-child{
+    margin-right: 0px;
+}
+
+.top-3 .podium:nth-child(2){
+    flex-basis : 60%;;
+}
+
+.top-3 .podium:nth-child(2) .podium-image img{
+    margin-top : -53%;
+}
+
+.top-3 .podium-content span{
+    font-size : 15px;
+}
+
+.top-3 .podium-content p{
+    font-size : 30px;
+}
+
+.top-3 .podium-content{
+    color : white;
+    background : #333;
+    padding : 1rem 1rem 1rem 1rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.podium-image{
+    background : #fff;
+    /* margin-bottom : -18px; */
+    height : 15vh;
+    border-top-left-radius : 20px;
+    border-top-right-radius : 20px;
+    border-bottom: 11px solid transparent;
+    /* height : 25%; */
+    /* z-index: 1; */
+}
+
+.top-3  .podium-image img{
+    width : 100%;
+    height : auto;
+    margin-top : -41%;
+}
+
+.top-3 .podium-flex .podium:last-child .podium-content{
+    border-color : var(--red-bull);
+}
+
+/* ==============Top - 3=================================== */
+
+/* ===============All Standings============================ */
+
+.top-3 .drivers-standings-container{
+    margin-top : 15px;
+}
+
+.top-3 .drivers-standings{
+    margin-top : 5px;
+    padding : 15px 20px;
+    background : #fff;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    transition : background 0.4s;
+    border-radius : 5px;
+}
+
+
+
+.standings-team-color-border{
+    display : inline-block;
+    height : 15px;
+    border-left: 5px solid transparent;
+    margin : 0 5px;
+    /* vertical-align: middle; */
+}
+
+.drivers-standings .points{
+    display : inline-block;
+    margin-right : 10px;
+    padding : 2px 5px;
+    border : 1px solid #fff;
+    background : #ededed;
+    border-radius: 15px;
+    font-size : 12px;
+}
+
+.drivers-standings .drivers-standings-team-name{
+    color : grey;
+    text-transform: uppercase;
+    margin-left : 10px;
+    font-size: 13px;
+}
+
+.drivers-standings:hover {
+    background : #333;
+    color : #fff;
+}
+
+.drivers-standings:hover .points{
+    color : #000;
+}
+
+.drivers-standings i{
+    color : #E10600;
+}
+
+.drivers-standings:hover i{
+    color : #fff;
+}
+
+.outer-container-standings{
+    background : #f7f4f1;
+}
+
+/* ===============All Standings============================ */
+
+/* ====================================================== Global Partners ================================================== */
+
+
+#global-partners .global-partners-image-flex{
+    margin-top: 20px;
+    display : flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    /* position : relative; */
+}
+
+#global-partners h3{
+    font-size : 28px;
+}
+
+#global-partners h3 i{
+    margin-left : 10px;
+    color : red;
+    font-size: 22px;
+}
+
+.global-partner-image{
+    margin : 0 30px;
+}
+
+.global-partner-image img{
+    width : 120px;
+    height : auto;
+    display :  block;
+}
+
+.global-partner-image h4{
+    font-size : 13px;
+    margin-top : 15px;
+    text-align : center;
+}
+
+
+
+/* =============================================================== Footer Content Border ======================================= */
+
+/* #38383f - Border Color */
+/* Background Color : #15151e */
+
+#footer{
+    background : #15151e;
+}
+
+#footer ul li a{
+    color : #fff;
+    font-size : 15px;
+    width : 100%;
+    border-bottom : 3px solid transparent;
+    padding-bottom : 3px;
+    padding-top : 3px;
+}
+
+#footer .footer-top ul{
+    margin-right : 45px;
+}
+
+#footer ul li{
+    margin-top : 14px;
+    width : 100%;
+}
+
+#footer ul li a:hover{
+    border-color : #E10600;
+}
+
+#footer .footer-top{
+    display: flex;
+    justify-content: flex-start;
+    border-bottom : 10px solid #38383f;
+    border-right : 10px solid #38383f;
+    border-bottom-right-radius: 15px;
+    padding-bottom : 30px;
+}
+
+#footer .second-row li a{
+    font-size : 10px;
+    text-transform: uppercase;
+}
+
+#footer .second-row li:first-child a{
+    font-size : 15px;
+    text-transform: inherit;
+}
+
+#footer .footer-middle{
+    padding : 20px 0;
+}
+
+#footer .footer-middle a{
+    text-transform: uppercase;
+    font-size : 13px;
+    color : #fff;
+    margin-right : 18px;
+    border-bottom : 3px solid transparent;
+    padding-bottom : 3px;
+}
+
+#footer .footer-middle a:hover{
+    border-color : #E10600;
+}
+
+#footer .footer-middle .footer-middle-second-row{
+    margin-top : 20px;
+}
+
+#footer .footer-middle{
+    border-bottom : 2px solid #38383f;
+}
+
+#footer .footer-bottom{
+    margin-top : 10px;
+}
+
+#footer .footer-bottom a{
+    color : #38383f;
+    display : block;
+    float : right;
+    font-size : 12px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

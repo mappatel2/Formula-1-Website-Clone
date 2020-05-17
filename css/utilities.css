@@ -1,0 +1,221 @@
+:root{
+    --red-bull : #0600ef;
+    --mclaren : #FF8700;
+    --williams : #0082fa;
+    --mercedes : #00D2BE;
+    --renault : #FFF500;
+    --racing-point : #F596C8;
+    --alfa-romeo : #960000;
+    --haas : #787878;
+    --ferrari : #DC0000;
+    --alpha-tauri : #fff;
+}
+
+.border-grey{
+    height : 30px;
+    border: 0.5px grey solid;
+}
+
+.f1-bold{
+    font-family : 'F1-bold',sans-serif;
+}
+
+.titilium-web{
+    font-family : 'Titillium Web', sans-serif;
+}
+
+.f1-reg{
+    font-family : 'F1-reg', sans-serif;
+}
+
+.border{
+    margin-top : 1px;
+    height : 12px;
+}
+
+.mercedes-color{
+    border-color : var(--mercedes);
+}
+.red-bull-color{
+    border-color : var(--red-bull);
+}
+.ferrari-color{
+    border-color : var(--ferrari);
+}
+.alpha-tauri-color{
+    border-color : var(--alpha-tauri);
+}
+.racing-point-color{
+    border-color : var(--racing-point);
+}
+.williams-color{
+    border-color : var(--williams);
+}
+.mclaren-color{
+    border-color : var(--mclaren);
+}
+.renault-color{
+    border-color : var(--renault);
+}
+.haas-color{
+    border-color : var(--haas);
+}
+.alfa-romeo-color{
+    border-color : var(--alfa-romeo);
+}
+
+.border-mercedes{
+    border: 2px var(--mercedes) solid;
+}
+.border-ferrari{
+    border: 2px var(--ferrari) solid;
+}
+.border-red-bull{
+    border: 2px var(--red-bull) solid;
+}
+.border-mclaren{
+    border: 2px var(--mclaren) solid;
+}
+.border-williams{
+    border: 2px var(--williams) solid;
+}
+.border-renault{
+    border: 2px var(--renault) solid;
+}
+.border-racing-point{
+    border: 2px var(--racing-point) solid;
+}
+.border-alfa-romeo{
+    border: 2px var(--alfa-romeo) solid;
+}
+.border-haas{
+    border: 2px var(--haas) solid;
+}
+.border-alpha-tauri{
+    border: 2px var(--alpha-tauri) solid;
+}
+
+
+.red-bull-hover:hover{
+    border-bottom : 1.5px var(--red-bull) solid;
+    border-right : 1.5px var(--red-bull) solid;
+    border-bottom-right-radius: 10px;
+}
+.mercedes-hover:hover{
+    border-bottom : 1.5px var(--mercedes) solid;
+    border-right : 1.5px var(--mercedes) solid;
+    border-bottom-right-radius: 10px;
+}
+.ferrari-hover:hover{
+    border-bottom : 1.5px var(--ferrari) solid;
+    border-right : 1.5px var(--ferrari) solid;
+    border-bottom-right-radius: 10px;
+}
+.alfa-romeo-hover:hover{
+    border-bottom : 1.5px var(--alfa-romeo) solid;
+    border-right : 1.5px var(--alfa-romeo) solid;
+    border-bottom-right-radius: 10px;
+}
+.renault-hover:hover{
+    border-bottom : 1.5px var(--renault) solid;
+    border-right : 1.5px var(--renault) solid;
+    border-bottom-right-radius: 10px;
+}
+.racing-point-hover:hover{
+    border-bottom : 1.5px var(--racing-point) solid;
+    border-right : 1.5px var(--racing-point) solid;
+    border-bottom-right-radius: 10px;
+}
+.mclaren-hover:hover{
+    border-bottom : 1.5px var(--mclaren) solid;
+    border-right : 1.5px var(--mclaren) solid;
+    border-bottom-right-radius: 10px;
+}
+.williams-hover:hover{
+    border-bottom : 1.5px var(--williams) solid;
+    border-right : 1.5px var(--williams) solid;
+    border-bottom-right-radius: 10px;
+}
+.haas-hover:hover{
+    border-bottom : 1.5px var(--haas) solid;
+    border-right : 1.5px var(--haas) solid;
+    border-bottom-right-radius: 10px;
+}
+.alpha-tauri-hover:hover{
+    border-bottom : 1.5px var(--alpha-tauri) solid;
+    border-right : 1.5px var(--alpha-tauri) solid;
+    border-bottom-right-radius: 10px;
+}
+
+/* =========================Containers================================================ */
+.container{
+    max-width : 1400px;
+    /* padding : 0.3rem 2rem; */
+    margin : 0 auto 0 auto;
+}
+
+.body-container{
+    max-width : 1400px;
+    padding : 2rem 2rem;
+    margin : 0 auto 0 auto;
+}
+
+.this-container{
+    max-width : 1200px;
+    overflow : hidden;
+    margin : auto;
+    background : #000;
+    padding: 3.5rem 0 3rem 0;
+}
+
+.standings-container{
+    max-width : 1100px;
+    padding : 2rem 2rem;
+    margin : 0px auto 0 auto;
+}
+
+.partners-container{
+    padding : 35px 0;
+    max-width : 1100px;
+    margin : 0 auto;
+}
+
+.footer-container{
+    padding : 35px 0;
+    max-width : 1100px;
+    margin : 0 auto;
+}
+
+/* =========================Containers================================================ */
+
+.btn{
+    display : inline-block;
+    width : 90px;
+    height : 37px;
+    text-align : center;
+    border : none;
+    cursor: pointer;
+    padding : 0.6rem 0.5rem;
+    border-radius : 5px;
+}
+
+.btn-dark{
+    color : #fff;
+    background : #000;
+    font-size : 0.8rem;
+    text-transform: uppercase;
+}
+
+.btn-primary{
+    background : var(--main-color);
+    color : #fff;
+    font-size : 0.8rem;
+    text-transform: uppercase;
+}
+
+.my-3{
+    margin-top : 0.3rem;
+}
+.my-4{
+    margin-top : 0.4rem;
+}
